@@ -1,0 +1,96 @@
+.btn {
+    &,
+    &:link,
+&:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding:1.5rem 4rem;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all .2s;
+    position: relative;
+    font-size: $default-font-size;
+
+    // for <button> elements
+    border:none;
+    cursor: pointer;
+}
+
+&:hover {
+    transform: translateY(-.3rem);
+    box-shadow: 0 1rem 2rem rgba($color-black,.2); /*fir shadow around x-axis, y-axis, how blur we want, color of shadow */
+
+    &::after {
+    transform: scaleX(1.4) scaleY(1.6); /* This will get the ::after in action */
+    opacity: 0; /* because we have aded the transition property in ::after this is why we are opacity 0 so it will hide after all this  */
+}
+}
+
+&:active {
+    transform: translateY(-.1rem);
+    box-shadow: 0 .5rem 1rem rgba($color-black,.2);
+}
+
+&--white {
+    background-color: $color-white;
+    color:$color-grey-dark;    
+
+    &::after {
+    background-color:$color-white;
+    }
+}
+
+&--green {
+    background-color:$color-primary;
+    color:$color-white;    
+
+    &::after {
+    background-color:$color-primary;
+    }
+}
+    &::after {
+        content: ''; /* important before using the ::after */
+        display: inline-block; /* important before using the ::after */
+        height: 100%; /* important before using the ::after */
+        width: 100%; /* important before using the ::after */
+        border-radius: 10rem; /* important before using the ::after */
+        position: absolute; /* important before using the ::after */
+        top: 0; /* important before using the ::after */
+        left: 0; /* important before using the ::after */
+        z-index: -1; /* because we don't want to show it */
+        transition: all .4s; /*This will slow down the process */
+}
+
+&--animated {
+    animation: moveInBottom .5s ease-out .75s; /* first animation-name, animation-time, animation timing function, animation-delay  */
+    animation-fill-mode: backwards;
+} 
+
+}
+/* */
+
+
+.btn-text {
+    &:link,
+    &:visited {
+        font-size: $default-font-size;
+        color: $color-primary;
+        display: inline-block;
+        text-decoration: none;
+        border-bottom: 1px solid $color-primary;
+        padding: 3px;
+        transition:all .2s;
+    }   
+
+    &:hover {
+        background: $color-primary;
+        color:white;
+        box-shadow: 0 1rem 3rem rgba($color-primary, .5);
+        transform: translateY(-2px);
+    }
+
+    &:active {
+        box-shadow: 0 1rem 3rem rgba($color-primary, .5);
+        transform: translateY(0);
+    }
+}

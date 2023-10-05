@@ -8,6 +8,7 @@
 
 
     @include respond(phone) {
+        height: 80vh;
         clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%)
     }
 

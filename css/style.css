@@ -809,7 +809,8 @@ body {
   /* we use this property so that logo-box can inherit the size where it has written absolute */ }
   @media (max-width: 37.5em) {
     .header {
-      clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%); } }
+      clip-path: polygon(0 0, 100% 0%, 100% 80%, 0 90%);
+ } }
   .header__logo-box {
     position: absolute;
     top: 4rem;

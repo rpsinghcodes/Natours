@@ -24,7 +24,7 @@ body {
         font-weight: 400;
         letter-spacing: 3.5rem;
         animation-name: moveToLeft;  /* moveToLeft is the name of animation this is the first important part of applying animation*/
-        animation-duration: 1s; /* this is the second important poart of applying animation*/
+        animation-duration: 3s; /* this is the second important poart of applying animation*/
 
         @include respond(phone) {
             letter-spacing: 1rem;
